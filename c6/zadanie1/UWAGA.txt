@@ -1,0 +1,2 @@
+Kolejka ma ustawione Q_SIZE = 8 w pliku queue.h, zeby bylo wygodnie testowac za pomoca interaktywnego programu.
+Q_SIZE ustala rozmiar tablicy. Kolejka jest wstanie przechowac maksymalnie Q_SIZE-1 elementow.

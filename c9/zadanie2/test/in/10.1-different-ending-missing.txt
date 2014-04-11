@@ -1,0 +1,21 @@
+fprintf(stdout,"%s",res_messages[2]);
+		fprintf(stdout,"%d:\n",row_counter);
+		
+		rewind(fp1);
+		rewind(fp2);
+		int cnt=1;
+		while(cnt<row_counter && ((ch1=fgetc(fp1))!=EOF) )
+			if(ch1=='\n')
+				cnt+=1;
+		cnt=1;
+		while(cnt<row_counter && ((ch2=fgetc(fp2))!=EOF) )
+			if(ch2=='\n')
+				cnt+=1;
+		fprintf(stdout,"%s:\n",fname1);		
+		while((ch1=fgetc(fp1))!=EOF && ch1!='\n')
+			putchar(ch1);
+		putchar('\n');
+		fprintf(stdout,"%s:\n",fname2);
+		while((ch2=fgetc(fp2))!=EOF && ch2!='\n')
+			putchar(ch2);
+		putchar('\n');

@@ -1,0 +1,6 @@
+Program nie czyta liczb zmiennoprzecinkowych. Nie dzia³a gdy na wejœciu jest np.
+* 3 2.00 4.00 4.00 2.00 2 3.00 3.00 2.00
+Dzia³a dla
+* 3 2 4 4 2 2 3 3 2
+lub dla u³amków typu
++ 2 1/3 5/10 5 3 2/4 5 8/7 1/2

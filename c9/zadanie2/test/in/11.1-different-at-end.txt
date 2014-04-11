@@ -1,0 +1,20 @@
+if(isblank(ch1)||isblank(ch2))
+		{
+			if(isblank(ch1)&&isblank(ch2))
+			{
+			}
+			else
+			{
+				res|=RES_BLANK;
+				if(isblank(ch1))
+				{
+					while(isblank(ch1=fgetc(fp1)))
+						;
+				}
+				else if(isblank(ch2))
+				{
+					while(isblank(ch2=fgetc(fp2)))
+						;
+				}
+			}
+		}

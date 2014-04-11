@@ -1,0 +1,285 @@
+\hypertarget{list_8h}{\section{list.\-h File Reference}
+\label{list_8h}\index{list.\-h@{list.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structwllc}{wllc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{list_8h_acf441fb55d009319132cad5669f967f6}{T\-\_\-\-V\-A\-L}~0
+\begin{DoxyCompactList}\small\item\em Defines value type number. \end{DoxyCompactList}\item 
+\#define \hyperlink{list_8h_a68771b88557c36b774f0ed4745a60fd9}{T\-\_\-\-S\-U\-B}~1
+\begin{DoxyCompactList}\small\item\em Defines sublist type number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structwllc}{wllc} \hyperlink{list_8h_ae917dedba88258bfb24fef5e2370403b}{W\-N\-O\-D\-E}
+\item 
+typedef struct \hyperlink{structwllc}{wllc} $\ast$ \hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{list_8h_ae917dedba88258bfb24fef5e2370403b}{W\-N\-O\-D\-E} \hyperlink{list_8h_a4b4c4e73939caa71b4ee3670531aed9a}{W\-L\-L\-C\-\_\-new\-Node} (int type, int val, \hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} sub)
+\begin{DoxyCompactList}\small\item\em Creates new W\-L\-L\-C node. \end{DoxyCompactList}\item 
+\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} \hyperlink{list_8h_afc387fc4de420ea79d170d3013a966ab}{W\-L\-L\-C\-\_\-new\-List\-From\-String} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Parses well-\/formatted string and creates W\-L\-L\-C. \end{DoxyCompactList}\item 
+\hyperlink{list_8h_ae917dedba88258bfb24fef5e2370403b}{W\-N\-O\-D\-E} $\ast$ \hyperlink{list_8h_a134de05eed6aa4236fb0a1eebd24da6d}{W\-L\-L\-C\-\_\-push\-Front} (\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} $\ast$list, \hyperlink{list_8h_ae917dedba88258bfb24fef5e2370403b}{W\-N\-O\-D\-E} node)
+\begin{DoxyCompactList}\small\item\em Inserts a new node at the beggining of a list. \end{DoxyCompactList}\item 
+\hyperlink{list_8h_ae917dedba88258bfb24fef5e2370403b}{W\-N\-O\-D\-E} $\ast$ \hyperlink{list_8h_a8c2520acd08f2f71eada866d7d130a47}{W\-L\-L\-C\-\_\-push\-Back} (\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} $\ast$list, \hyperlink{list_8h_ae917dedba88258bfb24fef5e2370403b}{W\-N\-O\-D\-E} node)
+\begin{DoxyCompactList}\small\item\em Inserts a new node at the end of a list. \end{DoxyCompactList}\item 
+\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} \hyperlink{list_8h_a152d6411bd637bd753e7079b72cf2221}{W\-L\-L\-C\-\_\-copy} (\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} list)
+\begin{DoxyCompactList}\small\item\em Creates a copy of list. \end{DoxyCompactList}\item 
+\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} \hyperlink{list_8h_a63c8ef1d81b2d3d9ee4e2cafb00fe264}{W\-L\-L\-C\-\_\-merge} (\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} list1, \hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} list2)
+\begin{DoxyCompactList}\small\item\em Creates a list composed of list1 and list2. \end{DoxyCompactList}\item 
+\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} \hyperlink{list_8h_aba2da59b65a1fa7c9b7c232b4e11e8d0}{W\-L\-L\-C\-\_\-flat} (\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} list)
+\begin{DoxyCompactList}\small\item\em Creates a list which is flattened 'list'. \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_ad636b0dd1d25ed41b7befbf9c8f0641c}{W\-L\-L\-C\-\_\-print} (\hyperlink{list_8h_ad6a13a08b719738b9d2671438034c27a}{W\-L\-L\-C} list, F\-I\-L\-E $\ast$stream)
+\begin{DoxyCompactList}\small\item\em Prints out textual representation of a list to stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition in file \hyperlink{list_8h_source}{list.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{list_8h_a68771b88557c36b774f0ed4745a60fd9}{\index{list.\-h@{list.\-h}!T\-\_\-\-S\-U\-B@{T\-\_\-\-S\-U\-B}}
+\index{T\-\_\-\-S\-U\-B@{T\-\_\-\-S\-U\-B}!list.h@{list.\-h}}
+\subsubsection[{T\-\_\-\-S\-U\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-\_\-\-S\-U\-B~1}}\label{list_8h_a68771b88557c36b774f0ed4745a60fd9}
+
+
+Defines sublist type number. 
+
+
+
+Definition at line 14 of file list.\-h.
+
+\hypertarget{list_8h_acf441fb55d009319132cad5669f967f6}{\index{list.\-h@{list.\-h}!T\-\_\-\-V\-A\-L@{T\-\_\-\-V\-A\-L}}
+\index{T\-\_\-\-V\-A\-L@{T\-\_\-\-V\-A\-L}!list.h@{list.\-h}}
+\subsubsection[{T\-\_\-\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-\_\-\-V\-A\-L~0}}\label{list_8h_acf441fb55d009319132cad5669f967f6}
+
+
+Defines value type number. 
+
+
+
+Definition at line 9 of file list.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{list_8h_ad6a13a08b719738b9d2671438034c27a}{\index{list.\-h@{list.\-h}!W\-L\-L\-C@{W\-L\-L\-C}}
+\index{W\-L\-L\-C@{W\-L\-L\-C}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf wllc} $\ast$ {\bf W\-L\-L\-C}}}\label{list_8h_ad6a13a08b719738b9d2671438034c27a}
+\hypertarget{list_8h_ae917dedba88258bfb24fef5e2370403b}{\index{list.\-h@{list.\-h}!W\-N\-O\-D\-E@{W\-N\-O\-D\-E}}
+\index{W\-N\-O\-D\-E@{W\-N\-O\-D\-E}!list.h@{list.\-h}}
+\subsubsection[{W\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf wllc}  {\bf W\-N\-O\-D\-E}}}\label{list_8h_ae917dedba88258bfb24fef5e2370403b}
+
+
+\subsection{Function Documentation}
+\hypertarget{list_8h_a152d6411bd637bd753e7079b72cf2221}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-copy@{W\-L\-L\-C\-\_\-copy}}
+\index{W\-L\-L\-C\-\_\-copy@{W\-L\-L\-C\-\_\-copy}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-L\-L\-C} W\-L\-L\-C\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-L\-L\-C}}]{list}
+\end{DoxyParamCaption}
+)}}\label{list_8h_a152d6411bd637bd753e7079b72cf2221}
+
+
+Creates a copy of list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & a list to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New list which is copy of 'list' 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file list.\-c.
+
+\hypertarget{list_8h_aba2da59b65a1fa7c9b7c232b4e11e8d0}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-flat@{W\-L\-L\-C\-\_\-flat}}
+\index{W\-L\-L\-C\-\_\-flat@{W\-L\-L\-C\-\_\-flat}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-flat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-L\-L\-C} W\-L\-L\-C\-\_\-flat (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-L\-L\-C}}]{list}
+\end{DoxyParamCaption}
+)}}\label{list_8h_aba2da59b65a1fa7c9b7c232b4e11e8d0}
+
+
+Creates a list which is flattened 'list'. 
+
+List is no longer multilayered. 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$list} & a pointer to W\-L\-L\-C \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New list. 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file list.\-c.
+
+\hypertarget{list_8h_a63c8ef1d81b2d3d9ee4e2cafb00fe264}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-merge@{W\-L\-L\-C\-\_\-merge}}
+\index{W\-L\-L\-C\-\_\-merge@{W\-L\-L\-C\-\_\-merge}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-merge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-L\-L\-C} W\-L\-L\-C\-\_\-merge (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-L\-L\-C}}]{list1, }
+\item[{{\bf W\-L\-L\-C}}]{list2}
+\end{DoxyParamCaption}
+)}}\label{list_8h_a63c8ef1d81b2d3d9ee4e2cafb00fe264}
+
+
+Creates a list composed of list1 and list2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$list1} & a pointer to W\-L\-L\-C \\
+\hline
+{\em $\ast$list2} & a pointer to W\-L\-L\-C \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New list. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file list.\-c.
+
+\hypertarget{list_8h_afc387fc4de420ea79d170d3013a966ab}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-new\-List\-From\-String@{W\-L\-L\-C\-\_\-new\-List\-From\-String}}
+\index{W\-L\-L\-C\-\_\-new\-List\-From\-String@{W\-L\-L\-C\-\_\-new\-List\-From\-String}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-new\-List\-From\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-L\-L\-C} W\-L\-L\-C\-\_\-new\-List\-From\-String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{list_8h_afc387fc4de420ea79d170d3013a966ab}
+
+
+Parses well-\/formatted string and creates W\-L\-L\-C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & a cstring formated like \mbox{[}\mbox{[}\mbox{[}3\mbox{]},\mbox{[}5,8\mbox{]},2\mbox{]},\mbox{[}1,5\mbox{]}\mbox{]} which represents a list to be created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new W\-L\-L\-C list. 
+\end{DoxyReturn}
+
+
+Definition at line 15 of file list.\-c.
+
+\hypertarget{list_8h_a4b4c4e73939caa71b4ee3670531aed9a}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-new\-Node@{W\-L\-L\-C\-\_\-new\-Node}}
+\index{W\-L\-L\-C\-\_\-new\-Node@{W\-L\-L\-C\-\_\-new\-Node}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-new\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-N\-O\-D\-E} W\-L\-L\-C\-\_\-new\-Node (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{int}]{val, }
+\item[{{\bf W\-L\-L\-C}}]{sub}
+\end{DoxyParamCaption}
+)}}\label{list_8h_a4b4c4e73939caa71b4ee3670531aed9a}
+
+
+Creates new W\-L\-L\-C node. 
+
+This is a convienience function that is meant to speed up list generation. 
+\begin{DoxyParams}{Parameters}
+{\em either} & T\-\_\-\-V\-A\-L or T\-\_\-\-S\-U\-B \\
+\hline
+{\em val} & when type=T\-\_\-\-V\-A\-L then val represents value stored in node \\
+\hline
+{\em sub} & when type=T\-\_\-\-S\-U\-B then sub is a pointer to sublist which this node points to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new node. 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file list.\-c.
+
+\hypertarget{list_8h_ad636b0dd1d25ed41b7befbf9c8f0641c}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-print@{W\-L\-L\-C\-\_\-print}}
+\index{W\-L\-L\-C\-\_\-print@{W\-L\-L\-C\-\_\-print}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void W\-L\-L\-C\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-L\-L\-C}}]{list, }
+\item[{F\-I\-L\-E $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}}\label{list_8h_ad636b0dd1d25ed41b7befbf9c8f0641c}
+
+
+Prints out textual representation of a list to stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & a list to be printed \\
+\hline
+{\em stream} & stream to which list is printed to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file list.\-c.
+
+\hypertarget{list_8h_a8c2520acd08f2f71eada866d7d130a47}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-push\-Back@{W\-L\-L\-C\-\_\-push\-Back}}
+\index{W\-L\-L\-C\-\_\-push\-Back@{W\-L\-L\-C\-\_\-push\-Back}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-push\-Back}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-N\-O\-D\-E}$\ast$ W\-L\-L\-C\-\_\-push\-Back (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-L\-L\-C} $\ast$}]{list, }
+\item[{{\bf W\-N\-O\-D\-E}}]{node}
+\end{DoxyParamCaption}
+)}}\label{list_8h_a8c2520acd08f2f71eada866d7d130a47}
+
+
+Inserts a new node at the end of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$list} & a pointer to W\-L\-L\-C \\
+\hline
+{\em node} & node to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to inserted node. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file list.\-c.
+
+\hypertarget{list_8h_a134de05eed6aa4236fb0a1eebd24da6d}{\index{list.\-h@{list.\-h}!W\-L\-L\-C\-\_\-push\-Front@{W\-L\-L\-C\-\_\-push\-Front}}
+\index{W\-L\-L\-C\-\_\-push\-Front@{W\-L\-L\-C\-\_\-push\-Front}!list.h@{list.\-h}}
+\subsubsection[{W\-L\-L\-C\-\_\-push\-Front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-N\-O\-D\-E}$\ast$ W\-L\-L\-C\-\_\-push\-Front (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-L\-L\-C} $\ast$}]{list, }
+\item[{{\bf W\-N\-O\-D\-E}}]{node}
+\end{DoxyParamCaption}
+)}}\label{list_8h_a134de05eed6aa4236fb0a1eebd24da6d}
+
+
+Inserts a new node at the beggining of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$list} & a pointer to W\-L\-L\-C \\
+\hline
+{\em node} & node to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to inserted node. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file list.\-c.
+

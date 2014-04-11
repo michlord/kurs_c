@@ -1,0 +1,1 @@
+void fillWithRandomSequence(int *tb,int size);

@@ -1,0 +1,208 @@
+.TH "list.c" 3 "Sun Dec 9 2012" "Version v1.0" "WLLC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+list.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'list\&.h'\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_STACK_SIZE\fP   10"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWNODE\fP \fBWLLC_newNode\fP (int type, int val, \fBWLLC\fP sub)"
+.br
+.RI "\fICreates new WLLC node\&. \fP"
+.ti -1c
+.RI "\fBWLLC\fP \fBWLLC_newListFromString\fP (const char *str)"
+.br
+.RI "\fIParses well-formatted string and creates WLLC\&. \fP"
+.ti -1c
+.RI "\fBWNODE\fP * \fBWLLC_pushFront\fP (\fBWLLC\fP *list, \fBWNODE\fP node)"
+.br
+.RI "\fIInserts a new node at the beggining of a list\&. \fP"
+.ti -1c
+.RI "\fBWNODE\fP * \fBWLLC_pushBack\fP (\fBWLLC\fP *list, \fBWNODE\fP node)"
+.br
+.RI "\fIInserts a new node at the end of a list\&. \fP"
+.ti -1c
+.RI "\fBWLLC\fP \fBWLLC_copy\fP (\fBWLLC\fP list)"
+.br
+.RI "\fICreates a copy of list\&. \fP"
+.ti -1c
+.RI "\fBWLLC\fP \fBWLLC_merge\fP (\fBWLLC\fP list1, \fBWLLC\fP list2)"
+.br
+.RI "\fICreates a list composed of list1 and list2\&. \fP"
+.ti -1c
+.RI "\fBWLLC\fP \fBWLLC_flat\fP (\fBWLLC\fP list)"
+.br
+.RI "\fICreates a list which is flattened 'list'\&. \fP"
+.ti -1c
+.RI "void \fBWLLC_print\fP (\fBWLLC\fP list, FILE *stream)"
+.br
+.RI "\fIPrints out textual representation of a list to stream\&. \fP"
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MAX_STACK_SIZE   10"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBWLLC\fP WLLC_copy (\fBWLLC\fPlist)"
+
+.PP
+Creates a copy of list\&. \fBParameters:\fP
+.RS 4
+\fIlist\fP a list to be copied 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New list which is copy of 'list' 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file list\&.c\&.
+.SS "\fBWLLC\fP WLLC_flat (\fBWLLC\fPlist)"
+
+.PP
+Creates a list which is flattened 'list'\&. List is no longer multilayered\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI*list\fP a pointer to WLLC 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New list\&. 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file list\&.c\&.
+.SS "\fBWLLC\fP WLLC_merge (\fBWLLC\fPlist1, \fBWLLC\fPlist2)"
+
+.PP
+Creates a list composed of list1 and list2\&. \fBParameters:\fP
+.RS 4
+\fI*list1\fP a pointer to WLLC 
+.br
+\fI*list2\fP a pointer to WLLC 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New list\&. 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file list\&.c\&.
+.SS "\fBWLLC\fP WLLC_newListFromString (const char *str)"
+
+.PP
+Parses well-formatted string and creates WLLC\&. \fBParameters:\fP
+.RS 4
+\fIstr\fP a cstring formated like [[[3],[5,8],2],[1,5]] which represents a list to be created 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new WLLC list\&. 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file list\&.c\&.
+.SS "\fBWNODE\fP WLLC_newNode (inttype, intval, \fBWLLC\fPsub)"
+
+.PP
+Creates new WLLC node\&. This is a convienience function that is meant to speed up list generation\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIeither\fP T_VAL or T_SUB 
+.br
+\fIval\fP when type=T_VAL then val represents value stored in node 
+.br
+\fIsub\fP when type=T_SUB then sub is a pointer to sublist which this node points to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new node\&. 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file list\&.c\&.
+.SS "void WLLC_print (\fBWLLC\fPlist, FILE *stream)"
+
+.PP
+Prints out textual representation of a list to stream\&. \fBParameters:\fP
+.RS 4
+\fIlist\fP a list to be printed 
+.br
+\fIstream\fP stream to which list is printed to 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file list\&.c\&.
+.SS "\fBWNODE\fP* WLLC_pushBack (\fBWLLC\fP *list, \fBWNODE\fPnode)"
+
+.PP
+Inserts a new node at the end of a list\&. \fBParameters:\fP
+.RS 4
+\fI*list\fP a pointer to WLLC 
+.br
+\fInode\fP node to be inserted 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Pointer to inserted node\&. 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file list\&.c\&.
+.SS "\fBWNODE\fP* WLLC_pushFront (\fBWLLC\fP *list, \fBWNODE\fPnode)"
+
+.PP
+Inserts a new node at the beggining of a list\&. \fBParameters:\fP
+.RS 4
+\fI*list\fP a pointer to WLLC 
+.br
+\fInode\fP node to be inserted 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Pointer to inserted node\&. 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file list\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WLLC from the source code\&.
